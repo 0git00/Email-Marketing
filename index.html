@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-4XVwVzCa+IctIVu4VEmxhyq2jprNGQgH01qokqWmmSs=' 'sha256-ypQQivY6ZPJ6ZS71txPLTAF7XA4NPzDUwb7lLuWrAk8=' 'sha256-fLJZ+vVCfpim6hmpFX6MDFqL2I+IEjArXFyYM1mcYao=' 'sha256-PH0KLOvoj03UL6eNcaRQF3TbcesfjMoAc6T57KWnZ6c=' 'sha256-2WJdZCgQjm61vLHq3GMqPbnayw5XRuhK3BcBU9QoqRw=' 'sha256-ihqHB3fHTlYajgJC0DRcVhnIEeJHD1DKuNnFML/6fvk='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formsubmit.co https://cdn.jsdelivr.net https://fastly.jsdelivr.net https://unpkg.com; manifest-src 'self'; form-action https://formsubmit.co; base-uri 'none'; object-src 'none'">
+<script>if(window.top!==window.self){try{window.top.location.href=window.self.location.href}catch(e){document.documentElement.style.display="none"}}</script>
 <title>Muhammad Haris Afzal | Email Marketing Expert & Freelancer</title>
 <meta name="description" content="Freelance email marketing expert Muhammad Haris Afzal: campaign management, automation and segmentation in Klaviyo, Mailchimp, HubSpot and Brevo.">
 <meta name="author" content="Muhammad Haris Afzal">
@@ -1342,6 +1345,25 @@ html.map-on .trust{color:#93a4c2;text-shadow:0 1px 10px rgba(6,10,20,.9)}
 html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
 </style>
 
+<style id="kit-popup-css">
+#kit-popup{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,6,14,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+#kit-popup.is-open{display:flex;animation:kp-fade .3s ease both}
+#kit-popup .kp-card{position:relative;width:100%;max-width:440px;background:#0d1424;border:1px solid rgba(148,172,214,.3);border-radius:20px;padding:40px 30px 30px;text-align:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.85);animation:kp-pop .4s cubic-bezier(.2,.7,.2,1) both}
+#kit-popup .kp-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(148,172,214,.3);background:rgba(255,255,255,.04);color:#eef2fa;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s}
+#kit-popup .kp-close:hover{background:rgba(91,155,255,.18);border-color:#5b9bff}
+#kit-popup .kp-close svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}
+#kit-popup .kp-badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.05em;color:#9cc2ff;background:rgba(91,155,255,.12);border:1px solid rgba(91,155,255,.35);border-radius:20px;padding:5px 12px;margin-bottom:16px}
+#kit-popup h2{font-family:'Inter',sans-serif;font-size:24px;line-height:1.2;font-weight:700;color:#fff;margin-bottom:10px}
+#kit-popup p{font-size:14.5px;line-height:1.65;color:#b8c3d6;margin-bottom:22px}
+#kit-popup .kp-cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;text-decoration:none;font-weight:700;font-size:14.5px;color:#06101f;background:#5b9bff;border-radius:10px;padding:13px 18px;transition:background .15s,transform .15s}
+#kit-popup .kp-cta:hover{background:#9cc2ff;transform:translateY(-1px)}
+#kit-popup .kp-skip{display:block;margin:14px auto 0;background:none;border:0;font-family:inherit;font-size:13px;color:#8d9bb5;cursor:pointer;text-decoration:underline}
+#kit-popup .kp-skip:hover{color:#eef2fa}
+@keyframes kp-fade{from{opacity:0}}
+@keyframes kp-pop{from{opacity:0;transform:translateY(18px) scale(.96)}}
+@media(prefers-reduced-motion:reduce){#kit-popup.is-open,#kit-popup .kp-card{animation:none}}
+@media(max-width:480px){#kit-popup .kp-card{padding:38px 20px 24px}#kit-popup h2{font-size:21px}}
+</style>
 </head>
 <body>
 <canvas id="map-canvas" aria-hidden="true"></canvas>
@@ -1658,7 +1680,7 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
             <div class="portfolio-stat"><div class="num">51%</div><div class="lbl">Open Rate</div></div>
             <div class="portfolio-stat"><div class="num">24%</div><div class="lbl">CTR</div></div>
           </div>
-          <button class="case-toggle" onclick="this.closest('.portfolio-card').classList.toggle('open'); this.querySelector('.toggle-label').textContent = this.closest('.portfolio-card').classList.contains('open') ? 'Hide Case Study' : 'Show Case Study';">
+          <button class="case-toggle" data-case-toggle>
             <span class="toggle-label">Show Case Study</span>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           </button>
@@ -1680,7 +1702,7 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
             <div class="portfolio-stat"><div class="num">46%</div><div class="lbl">Open Rate</div></div>
             <div class="portfolio-stat"><div class="num">19%</div><div class="lbl">CTR</div></div>
           </div>
-          <button class="case-toggle" onclick="this.closest('.portfolio-card').classList.toggle('open'); this.querySelector('.toggle-label').textContent = this.closest('.portfolio-card').classList.contains('open') ? 'Hide Case Study' : 'Show Case Study';">
+          <button class="case-toggle" data-case-toggle>
             <span class="toggle-label">Show Case Study</span>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           </button>
@@ -1702,7 +1724,7 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
             <div class="portfolio-stat"><div class="num">55%</div><div class="lbl">Open Rate</div></div>
             <div class="portfolio-stat"><div class="num">21%</div><div class="lbl">CTR</div></div>
           </div>
-          <button class="case-toggle" onclick="this.closest('.portfolio-card').classList.toggle('open'); this.querySelector('.toggle-label').textContent = this.closest('.portfolio-card').classList.contains('open') ? 'Hide Case Study' : 'Show Case Study';">
+          <button class="case-toggle" data-case-toggle>
             <span class="toggle-label">Show Case Study</span>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           </button>
@@ -1945,29 +1967,30 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
 
         <form class="contact-panel contact-form"
       id="contact-form"
+      autocomplete="off"
       action="https://formsubmit.co/muhammadharisafzal01@gmail.com"
       method="POST">
           <input type="hidden" name="_subject" value="New project inquiry from website">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-row">
             <div class="form-field">
               <label for="cf-name">Name</label>
-              <input id="cf-name" type="text" name="name" autocomplete="name" placeholder="Your name" required>
+              <input id="cf-name" type="text" name="name" maxlength="100" autocomplete="name" placeholder="Your name" required>
             </div>
             <div class="form-field">
               <label for="cf-email">Email</label>
-              <input id="cf-email" type="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+              <input id="cf-email" type="email" name="email" maxlength="254" autocomplete="email" placeholder="you@company.com" required>
             </div>
           </div>
           <div class="form-field">
             <label for="cf-business">Business Name</label>
-            <input id="cf-business" type="text" name="business" autocomplete="organization" placeholder="Your company">
+            <input id="cf-business" type="text" name="business" maxlength="120" autocomplete="organization" placeholder="Your company">
           </div>
           <div class="form-field">
             <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" placeholder="Tell me about your project..." required></textarea>
+            <textarea id="cf-message" name="message" maxlength="3000" placeholder="Tell me about your project..." required></textarea>
           </div>
           <button type="submit" class="send-btn" id="cf-submit-btn"><span class="cf-spinner"></span><span class="cf-btn-label">Send Message</span></button>
           <div id="cf-status" style="margin-top:14px; font-size:13.5px; text-align:center;"></div>
@@ -2109,8 +2132,20 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
   const contactBtnLabel = contactSubmit ? contactSubmit.querySelector('.cf-btn-label') : null;
 
   if (contactForm && contactStatus && contactSubmit) {
+    let lastSubmitAt = 0;
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
+
+      // Spam / abuse guards: bots fill the hidden honeypot; humans don't.
+      const honeypot = contactForm.querySelector('input[name="_honey"]');
+      if (honeypot && honeypot.value) return;
+      // Simple cooldown so the form can't be hammered from the page.
+      if (Date.now() - lastSubmitAt < 30000) {
+        const wait = Math.ceil((30000 - (Date.now() - lastSubmitAt)) / 1000);
+        contactStatus.className = 'cf-error';
+        contactStatus.textContent = 'Please wait ' + wait + ' seconds before sending another message.';
+        return;
+      }
 
       contactStatus.className = '';
       contactStatus.textContent = '';
@@ -2119,14 +2154,21 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
       if (contactBtnLabel) contactBtnLabel.textContent = 'Sending...';
 
       try {
-        const response = await fetch(contactForm.action, {
+        // FormSubmit needs its /ajax/ endpoint for fetch() requests; the plain
+        // endpoint redirects and gets blocked by CORS, which always looked like a failure.
+        const ajaxUrl = contactForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+        const response = await fetch(ajaxUrl, {
           method: 'POST',
           body: new FormData(contactForm),
           headers: { 'Accept': 'application/json' }
         });
 
-        if (!response.ok) throw new Error('Submission failed');
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || String(result.success) === 'false') {
+          throw new Error(result.message || 'Submission failed');
+        }
 
+        lastSubmitAt = Date.now(); // cooldown starts only after a successful send
         contactStatus.className = 'cf-success';
         contactStatus.textContent = 'Message sent successfully! Thank you — I\'ll get back to you shortly.';
         contactForm.reset();
@@ -2146,6 +2188,25 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
       }
     });
   }
+
+  // Privacy: never leave a visitor's typed details sitting in the form
+  // (back/forward cache or a shared computer would show them to the next person).
+  if (contactForm) {
+    const wipeForm = () => { try { contactForm.reset(); } catch (e) {} };
+    window.addEventListener('pagehide', wipeForm);
+    window.addEventListener('pageshow', (ev) => { if (ev.persisted) wipeForm(); });
+  }
+
+  // Case-study toggle (replaces inline onclick handlers so a strict CSP can be used)
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest ? e.target.closest('[data-case-toggle]') : null;
+    if (!btn) return;
+    const card = btn.closest('.portfolio-card');
+    if (!card) return;
+    card.classList.toggle('open');
+    const label = btn.querySelector('.toggle-label');
+    if (label) label.textContent = card.classList.contains('open') ? 'Hide Case Study' : 'Show Case Study';
+  });
 
   // Back-to-top — only appears once the visitor has scrolled past the hero, bottom-right
 
@@ -2244,7 +2305,7 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
 
     function collectTargets(){
       var found = Array.prototype.filter.call(document.querySelectorAll(selector), function(el){
-        return el.id !== 'gravity-toggle' && !el.closest('#gravity-toggle') && !el.closest('#cursor-glow') && !el.closest('#mh-loader') && !el.closest('#back-to-top');
+        return el.id !== 'gravity-toggle' && !el.closest('#gravity-toggle') && !el.closest('#cursor-glow') && !el.closest('#mh-loader') && !el.closest('#back-to-top') && !el.closest('#kit-popup');
       });
       // If a target contains another target (e.g. a card and a piece of
       // text inside it), only keep the outer one — letting both fall
@@ -2629,6 +2690,61 @@ html.map-on .role{text-shadow:0 1px 14px rgba(6,10,20,.9)}
   document.addEventListener('visibilitychange',function(){last=performance.now();if(!document.hidden)go();});
   var gt=document.getElementById('gravity-toggle');if(gt)gt.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();gt.click();}});
   go();
+})();
+</script>
+
+<div id="kit-popup" role="dialog" aria-modal="true" aria-labelledby="kp-title" aria-hidden="true">
+  <div class="kp-card">
+    <button type="button" class="kp-close" id="kp-close" aria-label="Close popup">
+      <svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <span class="kp-badge">EMAIL MARKETING HUB</span>
+    <h2 id="kp-title">Explore my Email Marketing Hub</h2>
+    <p>Free email marketing resources and updates, all in one place. Take a quick look.</p>
+    <a class="kp-cta" id="kp-cta" href="https://email-marketing-hub-2.kit.com/5497c0a18a" target="_blank" rel="noopener noreferrer">Open Email Marketing Hub &#8599;</a>
+    <button type="button" class="kp-skip" id="kp-skip">Maybe later</button>
+  </div>
+</div>
+<script>
+/* Kit popup: opens once, 5 seconds after load. The flag is stored only in this visitor's own
+   browser (it holds no personal data), so nothing is shared between visitors. */
+(function(){
+  var KEY='mh_kit_popup_seen_v1', DELAY=5000;
+  var pop=document.getElementById('kit-popup'); if(!pop) return;
+  var closeBtn=document.getElementById('kp-close'), skipBtn=document.getElementById('kp-skip'), cta=document.getElementById('kp-cta');
+  var shown=false, lastFocus=null, tries=0;
+  function seen(){ try{ return localStorage.getItem(KEY)==='1'; }catch(e){ try{ return sessionStorage.getItem(KEY)==='1'; }catch(e2){ return false; } } }
+  function mark(){ try{ localStorage.setItem(KEY,'1'); }catch(e){ try{ sessionStorage.setItem(KEY,'1'); }catch(e2){} } }
+  if(seen()) return;
+  function typing(){ var a=document.activeElement; return !!a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName); }
+  function open(){
+    if(shown || seen()) return;
+    if(typing() && tries++<6){ setTimeout(open,3000); return; } /* never interrupt someone typing in the form */
+    shown=true; mark();
+    lastFocus=document.activeElement;
+    pop.classList.add('is-open'); pop.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    closeBtn.focus();
+  }
+  function close(){
+    pop.classList.remove('is-open'); pop.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow='';
+    if(lastFocus && lastFocus.focus){ try{ lastFocus.focus(); }catch(e){} }
+  }
+  closeBtn.addEventListener('click',close);
+  skipBtn.addEventListener('click',close);
+  cta.addEventListener('click',function(){ setTimeout(close,150); });
+  pop.addEventListener('click',function(e){ if(e.target===pop) close(); });
+  document.addEventListener('keydown',function(e){
+    if(!pop.classList.contains('is-open')) return;
+    if(e.key==='Escape'){ close(); return; }
+    if(e.key==='Tab'){ /* keep keyboard focus inside the popup */
+      var f=[closeBtn,cta,skipBtn], i=f.indexOf(document.activeElement);
+      if(e.shiftKey && i<=0){ e.preventDefault(); f[f.length-1].focus(); }
+      else if(!e.shiftKey && (i===f.length-1 || i<0)){ e.preventDefault(); f[0].focus(); }
+    }
+  });
+  setTimeout(open,DELAY);
 })();
 </script>
 </body>
